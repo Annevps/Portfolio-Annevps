@@ -1,139 +1,245 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Dashboard de administrador." />
-    <title>Dashboard | Anne Vitória</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Painel administrativo do portfólio de Anne Vitória." />
+  <title>Painel Administrativo | Anne Vitória</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<body class="admin-dashboard">
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <a href="index.html" class="admin-brand">
+          <span class="admin-brand-mark">AV</span>
+          <div>
+            <strong>Anne Vitória</strong>
+            <small>Painel administrativo</small>
+          </div>
+        </a>
 
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <div class="container nav-container">
-          <a href="index.html" class="brand" aria-label="Página inicial">
-            <span class="brand-mark">AV</span>
-            <span class="brand-text">Anne Vitória</span>
+        <nav class="sidebar-nav" aria-label="Navegação administrativa">
+          <p class="nav-title">GERENCIAMENTO</p>
+
+          <button class="sidebar-link active" data-tab="projects" type="button">
+            <span class="sidebar-icon"><i class="fa-solid fa-folder-open"></i></span>
+            <span>Projetos</span>
+          </button>
+
+          <button class="sidebar-link" data-tab="leads" type="button">
+            <span class="sidebar-icon"><i class="fa-solid fa-envelope"></i></span>
+            <span>Leads</span>
+          </button>
+
+          <a href="index.html" class="sidebar-link">
+            <span class="sidebar-icon"><i class="fa-solid fa-globe"></i></span>
+            <span>Ver portfólio</span>
           </a>
 
-          <div class="admin-header-actions">
-            <span id="userEmail" class="admin-user"></span>
-            <button id="logoutBtn" class="btn btn-secondary btn-small">
-              <i class="fas fa-sign-out-alt"></i> Sair
-            </button>
+          <p class="nav-title nav-title-space">CONTA</p>
+
+          <button id="logoutBtn" class="sidebar-link logout-link" type="button">
+            <span class="sidebar-icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+            <span>Sair</span>
+          </button>
+        </nav>
+      </div>
+
+      <div class="sidebar-user">
+        <div class="user-avatar"><i class="fa-solid fa-user"></i></div>
+        <div class="user-info">
+          <strong>Administrador</strong>
+          <span id="userEmail">Carregando...</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="dashboard-content">
+      <header class="dashboard-topbar">
+        <div class="mobile-brand"><span>AV</span><strong>Anne Vitória</strong></div>
+        <div class="topbar-right">
+          <a href="index.html" class="view-site">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver site
+          </a>
+          <div class="topbar-user">
+            <div class="topbar-avatar"><i class="fa-solid fa-user"></i></div>
+            <span id="topbarEmail">Admin</span>
           </div>
         </div>
       </header>
 
-      <main>
-        <section class="admin-section">
-          <div class="container">
-            <div class="admin-header">
-              <h1><i class="fas fa-folder-open"></i> Gerenciar Projetos</h1>
-              <button id="addProjectBtn" class="btn btn-primary">
-                <i class="fas fa-plus"></i> Adicionar Projeto
-              </button>
+      <main class="dashboard-main">
+        <!-- ABA PROJETOS -->
+        <section class="tab-panel active" id="tab-projects">
+          <section class="page-heading">
+            <div>
+              <div class="breadcrumb">
+                <span>Painel</span>
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Projetos</span>
+              </div>
+              <h1>Gerenciar projetos</h1>
+              <p>Adicione, edite e organize os projetos exibidos no seu portfólio.</p>
+            </div>
+
+            <button id="addProjectBtn" class="btn btn-primary" type="button">
+              <i class="fa-solid fa-plus"></i> Novo projeto
+            </button>
+          </section>
+
+          <section class="overview-grid">
+            <article class="overview-card">
+              <div class="overview-icon blue"><i class="fa-solid fa-folder"></i></div>
+              <div>
+                <span>Conteúdo</span>
+                <strong>Projetos</strong>
+                <small>Gerencie seu portfólio</small>
+              </div>
+            </article>
+            <article class="overview-card">
+              <div class="overview-icon purple"><i class="fa-solid fa-cloud"></i></div>
+              <div>
+                <span>Banco de dados</span>
+                <strong>Supabase</strong>
+                <small>Dados sincronizados</small>
+              </div>
+            </article>
+            <article class="overview-card">
+              <div class="overview-icon green"><i class="fa-solid fa-shield-halved"></i></div>
+              <div>
+                <span>Acesso</span>
+                <strong>Protegido</strong>
+                <small>Área administrativa</small>
+              </div>
+            </article>
+          </section>
+
+          <section class="projects-section">
+            <div class="section-header">
+              <div>
+                <span class="section-label">PORTFÓLIO</span>
+                <h2>Seus projetos</h2>
+                <p>Os projetos cadastrados aparecerão aqui.</p>
+              </div>
+              <div class="project-count">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Projetos cadastrados</span>
+              </div>
             </div>
 
             <div class="projects-table-container">
-              <table class="projects-table" id="projectsTable">
-                <thead>
-                  <tr>
-                    <th><i class="fas fa-heading"></i> Título</th>
-                    <th><i class="fas fa-tag"></i> Categoria</th>
-                    <th><i class="fas fa-align-left"></i> Descrição</th>
-                    <th><i class="fas fa-link"></i> URL</th>
-                    <th><i class="fas fa-tools"></i> Ações</th>
-                  </tr>
-                </thead>
-                <tbody id="projectsList">
-                  <tr>
-                    <td colspan="5" class="text-center">⏳ Carregando projetos...</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="table-scroll">
+                <table class="projects-table">
+                  <thead>
+                    <tr>
+                      <th>Projeto</th>
+                      <th>Categoria</th>
+                      <th>Descrição</th>
+                      <th>Link</th>
+                      <th class="actions-column">Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody id="projectsList">
+                    <tr><td colspan="5" class="loading-cell">
+                      <div class="loading-state">
+                        <span class="loading-spinner"></span>
+                        <span>Carregando projetos...</span>
+                      </div>
+                    </td></tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
+          </section>
+        </section>
+
+        <!-- ABA LEADS -->
+        <section class="tab-panel" id="tab-leads">
+          <section class="page-heading">
+            <div>
+              <div class="breadcrumb">
+                <span>Painel</span>
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Leads</span>
+              </div>
+              <h1>Leads recebidos</h1>
+              <p>Mensagens enviadas pelo formulário de contato.</p>
+            </div>
+          </section>
+
+          <section class="projects-section">
+            <div class="section-header">
+              <div>
+                <span class="section-label">CONTATO</span>
+                <h2>Mensagens</h2>
+                <p>Todos os contatos que aceitaram a política de privacidade.</p>
+              </div>
+            </div>
+
+            <div class="projects-table-container">
+              <div class="table-scroll">
+                <table class="projects-table">
+                  <thead>
+                    <tr>
+                      <th>Nome</th>
+                      <th>E-mail</th>
+                      <th>Assunto</th>
+                      <th>Mensagem</th>
+                      <th>Data</th>
+                      <th class="actions-column">Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody id="leadsList">
+                    <tr><td colspan="6" class="loading-cell">
+                      <div class="loading-state">
+                        <span class="loading-spinner"></span>
+                        <span>Carregando leads...</span>
+                      </div>
+                    </td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
         </section>
       </main>
 
-      <!-- Modal -->
-      <div class="modal" id="projectModal">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2 id="modalTitle">Adicionar Projeto</h2>
-            <button class="modal-close" id="closeModal">&times;</button>
-          </div>
-
-          <form id="projectForm" class="admin-form">
-            <div class="field">
-              <label for="projectTitle"><i class="fas fa-heading"></i> Título</label>
-              <input type="text" id="projectTitle" name="title" placeholder="Nome do projeto" required />
-              <small class="error-message" id="titleError"></small>
-            </div>
-
-            <div class="field">
-              <label for="projectCategory"><i class="fas fa-tag"></i> Categoria</label>
-              <input type="text" id="projectCategory" name="category" placeholder="Ex: Desenvolvimento Web" required />
-              <small class="error-message" id="categoryError"></small>
-            </div>
-
-            <div class="field">
-              <label for="projectDescription"><i class="fas fa-align-left"></i> Descrição</label>
-              <textarea
-                id="projectDescription"
-                name="description"
-                rows="4"
-                placeholder="Descreva o projeto..."
-                required
-              ></textarea>
-              <small class="error-message" id="descriptionError"></small>
-            </div>
-
-            <div class="field">
-              <label for="projectUrl"><i class="fas fa-link"></i> URL do Projeto</label>
-              <input type="url" id="projectUrl" name="project_url" placeholder="https://seu-projeto.com" required />
-              <small class="error-message" id="projectUrlError"></small>
-            </div>
-
-            <div class="field">
-              <label for="projectImage"><i class="fas fa-image"></i> URL da Imagem (opcional)</label>
-              <input type="url" id="projectImage" name="image_url" placeholder="https://sua-imagem.com/imagem.jpg" />
-              <small class="error-message" id="imageUrlError"></small>
-            </div>
-
-            <div class="modal-actions">
-              <button type="submit" class="btn btn-primary">
-                <i class="fas fa-save"></i> Salvar
-              </button>
-              <button type="button" class="btn btn-secondary" id="cancelBtn">
-                <i class="fas fa-times"></i> Cancelar
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <footer class="site-footer">
-        <div class="container footer-content">
-          <div>
-            <p class="footer-name">Anne Vitória — Painel de Administrador</p>
-          </div>
-        </div>
+      <footer class="dashboard-footer">
+        <span>© 2026 Anne Vitória</span>
+        <span>Painel administrativo</span>
       </footer>
     </div>
+  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>    <script src="admin.js"></script>
-  </body>
-</html>
+  <!-- MODAL PROJETO -->
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <div class="modal-heading">
+          <div class="modal-icon"><i class="fa-solid fa-folder-plus"></i></div>
+          <div>
+            <span>PORTFÓLIO</span>
+            <h2 id="modalTitle">Adicionar projeto</h2>
+          </div>
+        </div>
+        <button class="modal-close" id="closeModal" type="button" aria-label="Fechar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form id="projectForm" class="admin-form">
+        <div class="field">
+          <label for="projectTitle"><i class="fa-solid fa-heading"></i> Nome do projeto</label>
+          <input type="text" id="projectTitle" name="title" placeholder="Ex.: Tech Empire" required />
+        </div>
+
+        <div class="field">
+          <label for="projectCategory"><i class="fa-solid fa-tag"></i> Categoria</label>

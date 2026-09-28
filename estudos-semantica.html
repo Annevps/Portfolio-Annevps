@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Estudo sobre HTML Semântico por Anne Vitória." />
+  <title>Semântica | Estudos | Anne Vitória</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <button class="admin-button" aria-label="Abrir painel de administrador"><i class="fas fa-lock"></i></button>
+
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="index.html" class="brand"><span class="brand-mark">AV</span><span class="brand-text">Anne Vitória</span></a>
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <nav class="main-nav" aria-label="Navegação principal">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre mim</a></li>
+            <li><a href="habilidades.html">Habilidades</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li class="has-submenu">
+              <a href="#" class="active" aria-haspopup="true">Estudos <i class="fas fa-chevron-down caret"></i></a>
+              <ul class="submenu">
+                <li><a href="estudos-seo.html">SEO</a></li>
+                <li><a href="estudos-geo.html">GEO</a></li>
+                <li><a href="estudos-semantica.html">Semântica</a></li>
+              </ul>
+            </li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container narrow">
+          <p class="section-tag">Estudos</p>
+          <h2>HTML Semântico</h2>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="study-content">
+            <div class="study-block reveal-item">
+              <h3>O que é semântica?</h3>
+              <p>Semântica em HTML é usar as tags certas para cada parte do conteúdo, dando significado estrutural à página — não apenas aparência. Isso ajuda leitores de tela, buscadores e a manutenção do código.</p>
+            </div>
+
+            <div class="study-block reveal-item">
+              <h3>Principais tags semânticas</h3>
+              <ul>
+                <li><code>&lt;header&gt;</code> — cabeçalho da página ou seção.</li>
+                <li><code>&lt;nav&gt;</code> — bloco de navegação.</li>
+                <li><code>&lt;main&gt;</code> — conteúdo principal.</li>
+                <li><code>&lt;section&gt;</code> — seção temática.</li>
+                <li><code>&lt;article&gt;</code> — conteúdo independente.</li>
+                <li><code>&lt;aside&gt;</code> — conteúdo complementar.</li>
+                <li><code>&lt;footer&gt;</code> — rodapé.</li>
+              </ul>
+            </div>
+
+            <div class="study-block reveal-item">
+              <h3>Antes x Depois</h3>
+              <p>Errado (apenas visual):</p>
+              <div class="study-code">&lt;div class="header"&gt;
+  &lt;div class="titulo"&gt;Anne Vitória&lt;/div&gt;
+&lt;/div&gt;</div>
+
+              <p style="margin-top:1rem;">Correto (semântico):</p>
+              <div class="study-code">&lt;header&gt;
+  &lt;h1&gt;Anne Vitória&lt;/h1&gt;
+&lt;/header&gt;</div>
+            </div>
+
+            <div class="study-block reveal-item">
+              <h3>Benefícios</h3>
+              <ul>
+                <li>Acessibilidade para leitores de tela.</li>
+                <li>Melhor SEO (buscadores entendem a estrutura).</li>
+                <li>Código mais limpo, legível e fácil de manter.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p class="footer-name">© 2026 Anne Vitória — Estudante de TI</p>
+        <div class="footer-links">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:annevitoriaps10@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,176 +1,171 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Entre em contato com Anne Vitória para propostas, dúvidas ou conhecer seus projetos."
-    />
-    <title>Contato | Anne Vitória</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Entre em contato com Anne Vitória para propostas, dúvidas ou conhecer seus projetos." />
+  <title>Contato | Anne Vitória</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <button class="admin-button" title="Painel de Administrador" aria-label="Abrir painel de administrador">
+      <i class="fas fa-lock"></i>
+    </button>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="index.html" class="brand" aria-label="Página inicial">
+          <span class="brand-mark">AV</span>
+          <span class="brand-text">Anne Vitória</span>
+        </a>
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" aria-label="Navegação principal">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre mim</a></li>
+            <li><a href="habilidades.html">Habilidades</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li class="has-submenu">
+              <a href="#" aria-haspopup="true">Estudos <i class="fas fa-chevron-down caret"></i></a>
+              <ul class="submenu">
+                <li><a href="estudos-seo.html">SEO</a></li>
+                <li><a href="estudos-geo.html">GEO</a></li>
+                <li><a href="estudos-semantica.html">Semântica</a></li>
+              </ul>
+            </li>
+            <li><a href="contato.html" class="active">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <!-- Botão Admin -->
-      <button class="admin-button" title="Painel de Administrador" aria-label="Abrir painel de administrador">
-        <i class="fas fa-lock"></i>
-      </button>
-
-      <header class="site-header">
-        <div class="container nav-container">
-          <a href="index.html" class="brand" aria-label="Página inicial">
-            <span class="brand-mark">AV</span>
-            <span class="brand-text">Anne Vitória</span>
-          </a>
-
-          <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-
-          <nav class="main-nav" aria-label="Navegação principal">
-            <ul>
-              <li><a href="index.html">Início</a></li>
-              <li><a href="sobre.html">Sobre mim</a></li>
-              <li><a href="habilidades.html">Habilidades</a></li>
-              <li><a href="projetos.html">Projetos</a></li>
-              <li><a href="contato.html" class="active">Contato</a></li>
-            </ul>
-          </nav>
+    <main>
+      <section class="page-hero">
+        <div class="container narrow">
+          <p class="section-tag">Contato</p>
+          <h2>Vamos conversar?</h2>
         </div>
-      </header>
+      </section>
 
-      <main>
-        <section class="page-hero">
-          <div class="container narrow">
-            <p class="section-tag">Contato</p>
-            <h2>Vamos conversar?</h2>
-          </div>
-        </section>
+      <section class="section">
+        <div class="container contact-layout">
+          <div class="contact-info reveal-item">
+            <p class="contact-intro">
+              Tem alguma dúvida, proposta ou quer conhecer meus projetos? Entre em contato comigo.
+            </p>
 
-        <section class="section">
-          <div class="container contact-layout">
-            <div class="contact-info">
-              <p class="contact-intro">
-                Tem alguma dúvida, proposta ou quer conhecer meus projetos? Entre
-                em contato comigo.
-              </p>
-
-              <div class="contact-list">
-                <a href="https://wa.me/5533998414684" target="_blank" rel="noopener noreferrer" class="contact-whatsapp">
-                  <span class="contact-icon"><i class="fab fa-whatsapp"></i></span>
+            <div class="contact-list">
+              <a href="https://wa.me/5533998414684" target="_blank" rel="noopener noreferrer" class="contact-whatsapp">
+                <span class="contact-icon"><i class="fab fa-whatsapp"></i></span>
+                <span>
                   <span class="contact-label">WhatsApp</span>
                   <span>(33) 99841-4684</span>
-                </a>
+                </span>
+              </a>
 
-                <a href="mailto:annevitoriaps10@gmail.com" class="contact-item">
-                  <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+              <a href="mailto:annevitoriaps10@gmail.com" class="contact-item">
+                <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                <span>
                   <span class="contact-label">E-mail</span>
                   <span>annevitoriaps10@gmail.com</span>
-                </a>
+                </span>
+              </a>
 
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="contact-item">
-                  <span class="contact-icon"><i class="fab fa-github"></i></span>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <span class="contact-icon"><i class="fab fa-github"></i></span>
+                <span>
                   <span class="contact-label">GitHub</span>
                   <span>github.com/annevitoria</span>
-                </a>
+                </span>
+              </a>
 
-                <a href="https://www.instagram.com/anne.vitoriaps/?hl=zh-cn" target="_blank" rel="noopener noreferrer" class="contact-item">
-                  <span class="contact-icon"><i class="fab fa-instagram"></i></span>
+              <a href="https://www.instagram.com/anne.vitoriaps/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <span class="contact-icon"><i class="fab fa-instagram"></i></span>
+                <span>
                   <span class="contact-label">Instagram</span>
                   <span>@anne.vitoriaps</span>
-                </a>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form reveal-item" id="contactForm" novalidate>
+            <div id="projectReferenceBox" class="project-reference-box" style="display: none;">
+              <div class="reference-header">
+                <i class="fas fa-link"></i>
+                <span>Site de Referência</span>
               </div>
+              <div id="referenceContent" class="reference-content"></div>
+              <button type="button" id="clearReferenceBtn" class="btn-clear" aria-label="Remover referência">
+                <i class="fas fa-times"></i>
+              </button>
             </div>
 
-            <form class="contact-form" id="contactForm" novalidate>
-              <!-- Referência de projeto (se selecionada) -->
-              <div id="projectReferenceBox" class="project-reference-box" style="display: none;">
-                <div class="reference-header">
-                  <i class="fas fa-link"></i>
-                  <span>Site de Referência</span>
-                </div>
-                <div id="referenceContent" class="reference-content"></div>
-                <button type="button" id="clearReferenceBtn" class="btn-clear">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
+            <div class="field">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" placeholder="Seu nome" />
+              <small class="error-message" id="nameError"></small>
+            </div>
 
-              <div class="field">
-                <label for="name">Nome</label>
-                <input type="text" id="name" name="name" placeholder="Seu nome" />
-                <small class="error-message" id="nameError"></small>
-              </div>
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seuemail@email.com" />
+              <small class="error-message" id="emailError"></small>
+            </div>
 
-              <div class="field">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="seuemail@email.com" />
-                <small class="error-message" id="emailError"></small>
-              </div>
+            <div class="field">
+              <label for="subject">Assunto</label>
+              <input type="text" id="subject" name="subject" placeholder="Assunto da mensagem" />
+              <small class="error-message" id="subjectError"></small>
+            </div>
 
-              <div class="field">
-                <label for="subject">Assunto</label>
-                <input type="text" id="subject" name="subject" placeholder="Assunto da mensagem" />
-                <small class="error-message" id="subjectError"></small>
-              </div>
+            <div class="field">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="6" placeholder="Escreva sua mensagem..."></textarea>
+              <small class="error-message" id="messageError"></small>
+            </div>
 
-              <div class="field">
-                <label for="message">Mensagem</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="6"
-                  placeholder="Escreva sua mensagem..."
-                ></textarea>
-                <small class="error-message" id="messageError"></small>
-              </div>
+            <div class="field field-checkbox">
+              <label class="checkbox-label">
+                <input type="checkbox" id="privacy" name="privacy" />
+                <span>Li e aceito a <a href="#" class="link-accent">Política de Privacidade</a> e autorizo o contato.</span>
+              </label>
+              <small class="error-message" id="privacyError"></small>
+            </div>
 
-              <button type="submit" class="btn btn-primary btn-full">
-                <i class="fas fa-paper-plane"></i> Enviar mensagem
-              </button>
-            </form>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <div class="container footer-content">
-          <div>
-            <p class="footer-name">Anne Vitória — Estudante de Tecnologia da Informação</p>
-            <p>Carlos Chagas – MG</p>
-          </div>
-
-          <div class="footer-links">
-            <a href="https://www.instagram.com/anne.vitoriaps/?hl=zh-cn" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:annevitoriaps10@gmail.com">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://wa.me/5533998414684" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-          </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fas fa-paper-plane"></i> Enviar mensagem
+            </button>
+          </form>
         </div>
-      </footer>
-    </div>
+      </section>
+    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="script.js"></script>
-  </body>
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div>
+          <p class="footer-name">© 2026 Anne Vitória — Estudante de TI</p>
+          <p>Carlos Chagas – MG</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/anne.vitoriaps/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:annevitoriaps10@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/5533998414684" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
 </html>

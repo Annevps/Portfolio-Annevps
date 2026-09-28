@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Estudo sobre SEO — Search Engine Optimization — por Anne Vitória." />
+  <title>SEO | Estudos | Anne Vitória</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <button class="admin-button" aria-label="Abrir painel de administrador"><i class="fas fa-lock"></i></button>
+
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="index.html" class="brand"><span class="brand-mark">AV</span><span class="brand-text">Anne Vitória</span></a>
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <nav class="main-nav" aria-label="Navegação principal">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre mim</a></li>
+            <li><a href="habilidades.html">Habilidades</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li class="has-submenu">
+              <a href="#" class="active" aria-haspopup="true">Estudos <i class="fas fa-chevron-down caret"></i></a>
+              <ul class="submenu">
+                <li><a href="estudos-seo.html">SEO</a></li>
+                <li><a href="estudos-geo.html">GEO</a></li>
+                <li><a href="estudos-semantica.html">Semântica</a></li>
+              </ul>
+            </li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container narrow">
+          <p class="section-tag">Estudos</p>
+          <h2>SEO — Search Engine Optimization</h2>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="study-content">
+            <div class="study-block reveal-item">
+              <h3>O que é SEO?</h3>
+              <p>SEO é o conjunto de técnicas que ajudam um site a aparecer melhor nos resultados orgânicos dos mecanismos de busca (como o Google). Envolve otimizar conteúdo, estrutura, performance e autoridade.</p>
+            </div>
+
+            <div class="study-block reveal-item">
+              <h3>Principais pilares</h3>
+              <ul>
+                <li><strong>SEO On-page:</strong> títulos, meta description, headings, URLs amigáveis, conteúdo relevante.</li>
+                <li><strong>SEO Técnico:</strong> performance, mobile-first, HTTPS, sitemap, robots.txt, dados estruturados.</li>
+                <li><strong>SEO Off-page:</strong> backlinks de qualidade, autoridade de domínio, presença em redes.</li>
+              </ul>
+            </div>
+
+            <div class="study-block reveal-item">
+              <h3>Exemplo de meta tags</h3>
+              <p>Tags bem escritas ajudam o buscador a entender a página:</p>
+              <div class="study-code">&lt;title&gt;Anne Vitória | Portfólio&lt;/title&gt;
+&lt;meta name="description" content="Portfólio profissional de Anne Vitória..." /&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</div>
+            </div>
+
+            <div class="study-block reveal-item">
+              <h3>Boas práticas</h3>
+              <ul>
+                <li>Um único <code>&lt;h1&gt;</code> por página.</li>
+                <li>Hierarquia correta de headings (h1 → h2 → h3).</li>
+                <li>Imagens com <code>alt</code> descritivo.</li>
+                <li>Conteúdo original e útil para o usuário.</li>
+                <li>Boa performance (Core Web Vitals).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p class="footer-name">© 2026 Anne Vitória — Estudante de TI</p>
+        <div class="footer-links">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:annevitoriaps10@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

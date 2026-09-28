@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Estudo sobre GEO — Generative Engine Optimization — por Anne Vitória." />
+  <title>GEO | Estudos | Anne Vitória</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <button class="admin-button" aria-label="Abrir painel de administrador"><i class="fas fa-lock"></i></button>
+
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="index.html" class="brand"><span class="brand-mark">AV</span><span class="brand-text">Anne Vitória</span></a>
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <nav class="main-nav" aria-label="Navegação principal">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre mim</a></li>
+            <li><a href="habilidades.html">Habilidades</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li class="has-submenu">
+              <a href="#" class="active" aria-haspopup="true">Estudos <i class="fas fa-chevron-down caret"></i></a>
+              <ul class="submenu">
+                <li><a href="estudos-seo.html">SEO</a></li>
+                <li><a href="estudos-geo.html">GEO</a></li>
+                <li><a href="estudos-semantica.html">Semântica</a></li>
+              </ul>
+            </li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container narrow">
+          <p class="section-tag">Estudos</p>
+          <h2>GEO — Generative Engine Optimization</h2>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="study-content">
+            <div class="study-block reveal-item">
+              <h3>O que é GEO?</h3>
+              <p>GEO é a otimização de conteúdo para aparecer e ser citado em respostas de motores generativos, como ChatGPT, Gemini, Perplexity e AI Overviews. O foco é ser compreendido e reaproveitado por IAs.</p>
+            </div>
+
+            <div class="study-block reveal-item">
+              <h3>Como se diferenciar de SEO?</h3>
+              <ul>
+                <li><strong>SEO</strong> busca cliques e posições em buscadores tradicionais.</li>
+                <li><strong>GEO</strong> busca citações e respostas geradas por IA.</li>
+                <li>GEO exige clareza factual, dados verificáveis e estrutura semântica forte.</li>
+              </ul>
+            </div>
+
+            <div class="study-block reveal-item">
+              <h3>Boas práticas de GEO</h3>
+              <ul>
+                <li>Responder perguntas de forma direta e objetiva.</li>
+                <li>Usar listas, tabelas e definições curtas.</li>
+                <li>Incluir dados, fontes e contexto verificável.</li>
+                <li>Marcar com dados estruturados (Schema.org / JSON-LD).</li>
+                <li>Manter tom claro, sem ambiguidade.</li>
+              </ul>
+            </div>
+
+            <div class="study-block reveal-item">
+              <h3>Exemplo de JSON-LD</h3>
+              <div class="study-code">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Anne Vitória",
+  "jobTitle": "Estudante de TI",
+  "address": "Carlos Chagas - MG"
+}
+&lt;/script&gt;</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p class="footer-name">© 2026 Anne Vitória — Estudante de TI</p>
+        <div class="footer-links">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:annevitoriaps10@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
