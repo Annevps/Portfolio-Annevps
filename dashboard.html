@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dashboard de administrador." />
+    <title>Dashboard | Anne Vitória</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav-container">
+          <a href="index.html" class="brand" aria-label="Página inicial">
+            <span class="brand-mark">AV</span>
+            <span class="brand-text">Anne Vitória</span>
+          </a>
+
+          <div class="admin-header-actions">
+            <span id="userEmail" class="admin-user"></span>
+            <button id="logoutBtn" class="btn btn-secondary btn-small">
+              <i class="fas fa-sign-out-alt"></i> Sair
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="admin-section">
+          <div class="container">
+            <div class="admin-header">
+              <h1><i class="fas fa-folder-open"></i> Gerenciar Projetos</h1>
+              <button id="addProjectBtn" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Adicionar Projeto
+              </button>
+            </div>
+
+            <div class="projects-table-container">
+              <table class="projects-table" id="projectsTable">
+                <thead>
+                  <tr>
+                    <th><i class="fas fa-heading"></i> Título</th>
+                    <th><i class="fas fa-tag"></i> Categoria</th>
+                    <th><i class="fas fa-align-left"></i> Descrição</th>
+                    <th><i class="fas fa-link"></i> URL</th>
+                    <th><i class="fas fa-tools"></i> Ações</th>
+                  </tr>
+                </thead>
+                <tbody id="projectsList">
+                  <tr>
+                    <td colspan="5" class="text-center">⏳ Carregando projetos...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Modal -->
+      <div class="modal" id="projectModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="modalTitle">Adicionar Projeto</h2>
+            <button class="modal-close" id="closeModal">&times;</button>
+          </div>
+
+          <form id="projectForm" class="admin-form">
+            <div class="field">
+              <label for="projectTitle"><i class="fas fa-heading"></i> Título</label>
+              <input type="text" id="projectTitle" name="title" placeholder="Nome do projeto" required />
+              <small class="error-message" id="titleError"></small>
+            </div>
+
+            <div class="field">
+              <label for="projectCategory"><i class="fas fa-tag"></i> Categoria</label>
+              <input type="text" id="projectCategory" name="category" placeholder="Ex: Desenvolvimento Web" required />
+              <small class="error-message" id="categoryError"></small>
+            </div>
+
+            <div class="field">
+              <label for="projectDescription"><i class="fas fa-align-left"></i> Descrição</label>
+              <textarea
+                id="projectDescription"
+                name="description"
+                rows="4"
+                placeholder="Descreva o projeto..."
+                required
+              ></textarea>
+              <small class="error-message" id="descriptionError"></small>
+            </div>
+
+            <div class="field">
+              <label for="projectUrl"><i class="fas fa-link"></i> URL do Projeto</label>
+              <input type="url" id="projectUrl" name="project_url" placeholder="https://seu-projeto.com" required />
+              <small class="error-message" id="projectUrlError"></small>
+            </div>
+
+            <div class="field">
+              <label for="projectImage"><i class="fas fa-image"></i> URL da Imagem (opcional)</label>
+              <input type="url" id="projectImage" name="image_url" placeholder="https://sua-imagem.com/imagem.jpg" />
+              <small class="error-message" id="imageUrlError"></small>
+            </div>
+
+            <div class="modal-actions">
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-save"></i> Salvar
+              </button>
+              <button type="button" class="btn btn-secondary" id="cancelBtn">
+                <i class="fas fa-times"></i> Cancelar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <div>
+            <p class="footer-name">Anne Vitória — Painel de Administrador</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>    <script src="admin.js"></script>
+  </body>
+</html>

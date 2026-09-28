@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Painel de administrador do portfólio de Anne Vitória." />
+    <title>Admin | Anne Vitória</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav-container">
+          <a href="index.html" class="brand" aria-label="Página inicial">
+            <span class="brand-mark">AV</span>
+            <span class="brand-text">Anne Vitória</span>
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <section class="auth-section">
+          <div class="container narrow">
+            <div class="auth-box">
+              <h1><i class="fas fa-lock"></i> Painel do Administrador</h1>
+              <p>Faça login para gerenciar seus projetos</p>
+
+              <form id="loginForm" class="auth-form">
+                <div class="field">
+                  <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="seu@email.com"
+                    required
+                  />
+                  <small class="error-message" id="emailError"></small>
+                </div>
+
+                <div class="field">
+                  <label for="password"><i class="fas fa-key"></i> Senha</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="••••••••"
+                    required
+                  />
+                  <small class="error-message" id="passwordError"></small>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">
+                  <i class="fas fa-sign-in-alt"></i> Entrar
+                </button>
+
+                <small class="auth-message" id="authMessage"></small>
+              </form>
+
+              <div class="auth-divider">ou</div>
+
+              <a href="index.html" class="btn btn-secondary btn-full">
+                <i class="fas fa-arrow-left"></i> Voltar ao portfólio
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <div>
+            <p class="footer-name">Anne Vitória — Portfólio</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

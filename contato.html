@@ -8,16 +8,25 @@
       content="Entre em contato com Anne Vitória para propostas, dúvidas ou conhecer seus projetos."
     />
     <title>Contato | Anne Vitória</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="page-shell">
+      <!-- Botão Admin -->
+      <button class="admin-button" title="Painel de Administrador" aria-label="Abrir painel de administrador">
+        <i class="fas fa-lock"></i>
+      </button>
+
       <header class="site-header">
         <div class="container nav-container">
           <a href="index.html" class="brand" aria-label="Página inicial">
@@ -25,11 +34,7 @@
             <span class="brand-text">Anne Vitória</span>
           </a>
 
-          <button
-            class="nav-toggle"
-            aria-label="Abrir menu"
-            aria-expanded="false"
-          >
+          <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -38,10 +43,10 @@
           <nav class="main-nav" aria-label="Navegação principal">
             <ul>
               <li><a href="index.html">Início</a></li>
-              <li><a href="about.html">Sobre mim</a></li>
-              <li><a href="skills.html">Habilidades</a></li>
-              <li><a href="projects.html">Projetos</a></li>
-              <li><a href="contact.html" class="active">Contato</a></li>
+              <li><a href="sobre.html">Sobre mim</a></li>
+              <li><a href="habilidades.html">Habilidades</a></li>
+              <li><a href="projetos.html">Projetos</a></li>
+              <li><a href="contato.html" class="active">Contato</a></li>
             </ul>
           </nav>
         </div>
@@ -64,29 +69,45 @@
               </p>
 
               <div class="contact-list">
-                <a href="mailto:annevitoriaps10@gmail.com">
+                <a href="https://wa.me/5533998414684" target="_blank" rel="noopener noreferrer" class="contact-whatsapp">
+                  <span class="contact-icon"><i class="fab fa-whatsapp"></i></span>
+                  <span class="contact-label">WhatsApp</span>
+                  <span>(33) 99841-4684</span>
+                </a>
+
+                <a href="mailto:annevitoriaps10@gmail.com" class="contact-item">
+                  <span class="contact-icon"><i class="fas fa-envelope"></i></span>
                   <span class="contact-label">E-mail</span>
                   <span>annevitoriaps10@gmail.com</span>
                 </a>
 
-                <a href="https://github.com/" target="_blank" rel="noreferrer">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                  <span class="contact-icon"><i class="fab fa-github"></i></span>
                   <span class="contact-label">GitHub</span>
-                  <span>github.com/seuusuario</span>
+                  <span>github.com/annevitoria</span>
                 </a>
 
-                <a href="https://www.instagram.com/anne.vitoriaps/?hl=zh-cn" target="_blank" rel="noreferrer">
+                <a href="https://www.instagram.com/anne.vitoriaps/?hl=zh-cn" target="_blank" rel="noopener noreferrer" class="contact-item">
+                  <span class="contact-icon"><i class="fab fa-instagram"></i></span>
                   <span class="contact-label">Instagram</span>
                   <span>@anne.vitoriaps</span>
-                </a>
-
-                <a href="https://wa.me/5533998414684" target="_blank" rel="noreferrer">
-                  <span class="contact-label">WhatsApp</span>
-                  <span>(33) 99841-4684</span>
                 </a>
               </div>
             </div>
 
             <form class="contact-form" id="contactForm" novalidate>
+              <!-- Referência de projeto (se selecionada) -->
+              <div id="projectReferenceBox" class="project-reference-box" style="display: none;">
+                <div class="reference-header">
+                  <i class="fas fa-link"></i>
+                  <span>Site de Referência</span>
+                </div>
+                <div id="referenceContent" class="reference-content"></div>
+                <button type="button" id="clearReferenceBtn" class="btn-clear">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+
               <div class="field">
                 <label for="name">Nome</label>
                 <input type="text" id="name" name="name" placeholder="Seu nome" />
@@ -117,7 +138,7 @@
               </div>
 
               <button type="submit" class="btn btn-primary btn-full">
-                Enviar mensagem
+                <i class="fas fa-paper-plane"></i> Enviar mensagem
               </button>
             </form>
           </div>
@@ -132,14 +153,24 @@
           </div>
 
           <div class="footer-links">
-            <a href="https://www.instagram.com/anne.vitoriaps/?hl=zh-cn" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="mailto:annevitoriaps10@gmail.com">E-mail</a>
+            <a href="https://www.instagram.com/anne.vitoriaps/?hl=zh-cn" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:annevitoriaps10@gmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/5533998414684" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-whatsapp"></i>
+            </a>
           </div>
         </div>
       </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
   </body>
 </html>

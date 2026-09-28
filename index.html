@@ -5,19 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfólio pessoal de Anne Vitória, estudante de Tecnologia da Informação com interesse em programação e desenvolvimento web."
+      content="Portfólio profissional de Anne Vitória, estudante de Tecnologia da Informação com interesse em programação e desenvolvimento web."
     />
     <title>Anne Vitória | Portfólio</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="page-shell">
+      <!-- Botão Admin no canto -->
+      <button class="admin-button" title="Painel de Administrador" aria-label="Abrir painel de administrador">
+        <i class="fas fa-lock"></i>
+      </button>
+
       <header class="site-header">
         <div class="container nav-container">
           <a href="index.html" class="brand" aria-label="Página inicial">
@@ -25,11 +34,7 @@
             <span class="brand-text">Anne Vitória</span>
           </a>
 
-          <button
-            class="nav-toggle"
-            aria-label="Abrir menu"
-            aria-expanded="false"
-          >
+          <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -38,10 +43,10 @@
           <nav class="main-nav" aria-label="Navegação principal">
             <ul>
               <li><a href="index.html" class="active">Início</a></li>
-              <li><a href="about.html">Sobre mim</a></li>
-              <li><a href="skills.html">Habilidades</a></li>
-              <li><a href="projects.html">Projetos</a></li>
-              <li><a href="contact.html">Contato</a></li>
+              <li><a href="sobre.html">Sobre mim</a></li>
+              <li><a href="habilidades.html">Habilidades</a></li>
+              <li><a href="projetos.html">Projetos</a></li>
+              <li><a href="contato.html">Contato</a></li>
             </ul>
           </nav>
         </div>
@@ -50,47 +55,59 @@
       <main>
         <section class="hero">
           <div class="container hero-grid">
-            <div class="hero-visual">
+            <div class="hero-visual fade-in-left">
               <div class="photo-frame">
                 <img
-                  src="assets/anne-vitoria.png"
+                  src="anne-vitoria.png"
                   alt="Retrato de Anne Vitória sorrindo"
                 />
               </div>
             </div>
 
-            <div class="hero-content">
-              <p class="eyebrow">Estudante de TI</p>
+            <div class="hero-content fade-in-right">
+              <p class="eyebrow slide-in">Estudante de TI</p>
               <h1>
                 Anne
                 <span>Vitória</span>
               </h1>
 
-              <p class="lead">
-                “Construindo meu futuro através da tecnologia.”
-              </p>
+              <p class="lead">"Construindo meu futuro através da tecnologia."</p>
 
               <p class="description">
                 Tenho 16 anos e estudo Tecnologia da Informação junto ao Ensino
-                Médio na Escola Estadual Dr. João Beraldo, em Carlos Chagas. Tenho
-                maior interesse pela área de programação e desenvolvimento web e
-                estou constantemente aprendendo e criando novos projetos.
+                Médio na Escola Estadual Dr. João Beraldo, em Carlos Chagas.
+                Tenho maior interesse pela área de programação e desenvolvimento
+                web e estou constantemente aprendendo e criando novos projetos.
               </p>
 
               <div class="hero-actions">
-                <a href="projects.html" class="btn btn-primary">Ver meus projetos</a>
-                <a href="contact.html" class="btn btn-secondary">Entrar em contato</a>
+                <a href="projetos.html" class="btn btn-primary btn-animate">
+                  <i class="fas fa-arrow-right"></i> Ver meus projetos
+                </a>
+                <a href="contato.html" class="btn btn-secondary btn-animate">
+                  <i class="fas fa-comment-dots"></i> Entrar em contato
+                </a>
               </div>
 
-              <div class="tech-strip" aria-label="Tecnologias estudadas">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>SQL</span>
-                <span>PHP</span>
-                <span>UI/UX</span>
+              <div class="code-window fade-in-up">
+                <div class="code-window-header">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <small>anne-vitoria.js</small>
+                </div>
+                <pre><code id="typingCode"></code></pre>
+              </div>
+
+              <div class="tech-strip fade-in-up-delay" aria-label="Tecnologias estudadas">
+                <span><i class="fab fa-html5"></i> HTML</span>
+                <span><i class="fab fa-css3-alt"></i> CSS</span>
+                <span><i class="fab fa-js"></i> JavaScript</span>
+                <span><i class="fab fa-git-alt"></i> Git</span>
+                <span><i class="fab fa-github"></i> GitHub</span>
+                <span><i class="fas fa-database"></i> SQL</span>
+                <span><i class="fab fa-php"></i> PHP</span>
+                <span><i class="fas fa-pencil-ruler"></i> UI/UX</span>
               </div>
             </div>
           </div>
@@ -105,14 +122,24 @@
           </div>
 
           <div class="footer-links">
-            <a href="https://www.instagram.com/anne.vitoriaps/?hl=zh-cn" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="mailto:annevitoriaps10@gmail.com">E-mail</a>
+            <a href="https://www.instagram.com/anne.vitoriaps/?hl=zh-cn" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:annevitoriaps10@gmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/5533998414684" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-whatsapp"></i>
+            </a>
           </div>
         </div>
       </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
   </body>
 </html>
