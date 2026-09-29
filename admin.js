@@ -4,7 +4,7 @@
 /* =========================================================
    ANNE VITÓRIA — Admin + Dashboard
 ========================================================= */
-NEXT_PUBLIC_SUPABASE_URL="https://khktnihmmjdnjosnqkls.supabase.co/rest/v1/"
+NEXT_PUBLIC_SUPABASE_URL="https://khktnihmmjdnjosnqkls.supabase.co"
 NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY="sb_publishable_G7eu65EA3s8SrP633y1bDQ_0k-FOSJJ"
 let supabaseClient = null;
 let currentUser = null;
