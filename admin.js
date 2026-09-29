@@ -1,9 +1,8 @@
 /* =========================================================
    ANNE VITÓRIA — Admin + Dashboard
 ========================================================= */
-const SUPABASE_URL = "https://khktnihmmjdnjosnqkls.supabase.co/rest/v1/";
-const SUPABASE_ANON_KEY = "sb_secret_U6qHc5-h3ukVuOhjrsKXlA_D0gLtM5zsb_secret_U6qHc5-h3ukVuOhjrsKXlA_D0gLtM5z";
-
+NEXT_PUBLIC_SUPABASE_URL=https://khktnihmmjdnjosnqkls.supabase.co
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_G7eu65EA3s8SrP633y1bDQ_0k-FOSJJ
 let supabaseClient = null;
 let currentUser = null;
 let editingProjectId = null;
