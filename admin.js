@@ -2,7 +2,7 @@
    ANNE VITÓRIA — ADMIN + DASHBOARD
    ========================================================= */
 
-const SUPABASE_URL = "https://khktnihmmjdjnosqkls.supabase.co";
+const SUPABASE_URL = "https://khktnihmmjdnjosnqkls.supabase.co";
 
 const SUPABASE_PUBLISHABLE_KEY =
   "sb_publishable_G7eu65EA3s8SrP633y1bDQ_0k-FOSJJ";
@@ -11,8 +11,6 @@ const SUPABASE_PUBLISHABLE_KEY =
 let supabaseClient = null;
 let currentUser = null;
 let editingProjectId = null;
-
-
 /* =========================================================
    INICIALIZAR SUPABASE
    ========================================================= */
