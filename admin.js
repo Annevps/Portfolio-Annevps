@@ -184,20 +184,23 @@ if (loginForm) {
 
       }
 
-    } catch (error) {
+  } catch (error) {
+  console.error("ERRO COMPLETO:", error);
 
-      console.error(
-        "Erro inesperado:",
-        error
-      );
+  let mensagem = "Erro desconhecido";
 
+  if (error) {
+    mensagem =
+      error.message ||
+      error.name ||
+      String(error);
+  }
 
-      authMessage.textContent =
-        "❌ Ocorreu um erro ao fazer login.";
+  authMessage.textContent =
+    "❌ " + mensagem;
 
-      authMessage.classList.add(
-        "error"
-      );
+  authMessage.classList.add("error");
+}
 
     }
 
