@@ -1,7 +1,7 @@
 /* =========================================================
    ANNE VITÓRIA — script principal
 ========================================================= */
-const SUPABASE_URL = "https://khktnihmmjdnjosnqkls.supabase.co/rest/v1/";
+const SUPABASE_URL = "https://khktnihmmjdnjosnqkls.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_G7eu65EA3s8SrP633y1bDQ_0k-FOSJJ";
 
 let supabaseClient = null;
